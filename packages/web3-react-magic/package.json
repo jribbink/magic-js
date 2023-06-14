@@ -1,0 +1,27 @@
+{
+  "name": "web3-react-magic",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.9",
+  "target": "browser",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    "import": "./dist/es/index.mjs",
+    "require": "./dist/cjs/index.js"
+  },
+  "dependencies": {
+    "@web3-react/types": "^8.1.2-beta.0",
+    "magic-sdk": "^17.3.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Unboxed-Software/web3-react-magic-connect.git"
+  }
+}
