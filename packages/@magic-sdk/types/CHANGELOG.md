@@ -1,3 +1,35 @@
+# v16.0.0 (Thu Jul 27 2023)
+
+#### 💥 Breaking Change
+
+- Magic SDK Node version bump [#538](https://github.com/magiclabs/magic-js/pull/538) ([@makrandgupta](https://github.com/makrandgupta))
+
+#### 🐛 Bug Fix
+
+- force canary build for all packages. ([@makrandgupta](https://github.com/makrandgupta))
+
+#### Authors: 1
+
+- Makrand Gupta ([@makrandgupta](https://github.com/makrandgupta))
+
+---
+
+# v15.8.0 (Wed Jul 26 2023)
+
+#### 🚀 Enhancement
+
+- Deeplinked wallet methods [#594](https://github.com/magiclabs/magic-js/pull/594) ([@Dizigen](https://github.com/Dizigen))
+
+#### 🐛 Bug Fix
+
+- add new deep linked sdk methods ([@Dizigen](https://github.com/Dizigen))
+
+#### Authors: 1
+
+- David He ([@Dizigen](https://github.com/Dizigen))
+
+---
+
 # v15.7.0 (Mon Jul 24 2023)
 
 #### 🚀 Enhancement
