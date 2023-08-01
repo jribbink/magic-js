@@ -1,7 +1,15 @@
-export interface FlowConfig {
+export interface FlowConfigStandard {
   rpcUrl: string;
-  network: string;
+  network: 'testnet' | 'mainnet';
 }
+
+export interface FlowConfigEmulator {
+  rpcUrl: string;
+  adminUrl: string;
+  network: 'emulator';
+}
+
+export type FlowConfig = FlowConfigStandard | FlowConfigEmulator;
 
 export interface ConfigType {
   rpcUrl: string;

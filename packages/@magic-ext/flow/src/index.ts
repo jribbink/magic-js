@@ -17,9 +17,29 @@ export class FlowExtension extends Extension.Internal<'flow', any> {
       chainType: 'FLOW',
       network: flowConfig.network,
     };
+
+    if (flowConfig.network === 'emulator') {
+      this.config.adminUrl = flowConfig.adminUrl;
+    }
   }
 
   getAccount = () => {
+    if (this.config.network === 'emulator') {
+      fetch(new URL('/emulator/config', this.config.adminUrl).toString()).then(async (x) => {
+        const serviceAccount = 'f8';
+        const { serviceKey } = await x.json();
+        const accountExists = await fcl.query({
+          cadence: `
+          import AccountManager from ${serviceAccount}
+
+          pub fun main(account: ): Bool {
+            AccountManager.getAccount()
+          }
+          `,
+        });
+      });
+    }
+
     return this.request(this.utils.createJsonRpcRequestPayload(FlowPayloadMethod.FlowGetAccount, []));
   };
 
